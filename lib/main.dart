@@ -75,7 +75,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               child: Text(
-                'True',
+                'False',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,
@@ -85,7 +85,18 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        Row(
+          children: <Widget>[
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            )
+          ],
+        )
       ],
     );
   }
