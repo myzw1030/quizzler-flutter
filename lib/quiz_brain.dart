@@ -1,7 +1,9 @@
 import 'package:quizzler/question.dart';
 
 class QuizBrain {
-  List<Question> questionsBank = [
+  int _questionNumber = 0;
+
+  List<Question> _questionsBank = [
     Question(
       q: '2000円札は、既に製造が停止されているでしょうか。マルかバツか、どちらでしょう？',
       a: true,
@@ -55,4 +57,18 @@ class QuizBrain {
       a: true,
     ),
   ];
+
+  void nextQuestion() {
+    if (_questionNumber < _questionsBank.length - 1) {
+      _questionNumber++;
+    }
+  }
+
+  String getQuestionText() {
+    return _questionsBank[_questionNumber].questionText;
+  }
+
+  bool getQuestionAnswer() {
+    return _questionsBank[_questionNumber].questionAnswer;
+  }
 }
