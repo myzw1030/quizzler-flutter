@@ -38,6 +38,8 @@ build/
 **/android/**/GeneratedPluginRegistrant.java
 
 # iOS/XCode related
+**/ios/**/*.ipa
+**/ios/**/*.plist
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3
 **/ios/**/*.moved-aside
